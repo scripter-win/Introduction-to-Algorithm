@@ -35,24 +35,20 @@ def PeakFinding_TwoDimension_greed(a,row,column):
             if(a[i+1][j] > max):
                 max = a[i+1][j]
                 state = 1
-
         if(j < column):
             if(a[i][j+1] > max):
                 max = a[i][j+1]
                 state = 2
-
         if(a[i-1][j] > max):
             max = a[i-1][j]
             state = -1
-
         if(a[i][j-1] > max):
             max = a[i][j-1]
             state = -2
         if state == 0:
             return [i,j] 
         i += state % 2
-        j += state / 2
-        
+        j += state / 2        
     return 0
 
 #two dimension edition of greed strategy
@@ -72,7 +68,3 @@ def PeakFinding_TwoDimension_binary(a,row,column):
         else:
             return [mi,a[mi].index(max(a[mi]))]
     return mi
-
-k=[23,24,13],[3,3,5],[11,1,6]
-
-print PeakFinding_TwoDimension_binary(k,3,3)
