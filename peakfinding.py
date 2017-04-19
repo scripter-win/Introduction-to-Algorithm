@@ -1,7 +1,5 @@
 #test case
-c=[]
-for i in range(33600):
-    c.append([i])
+
 count = 0
 
 # one dimension edition
@@ -19,8 +17,6 @@ def PeakFinding(a,lo,hi):
         return PeakFinding(a,lo,hi)
     else:
         return (hi+lo)/2
-print PeakFinding(c,0,len(c)-1)
-print count
 
 #two dimension edition of greed strategy
 def PeakFinding_TwoDimension_greed(a,row,column):
